@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import Link from "next/link";
+import { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Error({
   error,
@@ -15,7 +15,7 @@ export default function Error({
   return (
     <div>
       <h2>Recipe is not found.</h2>
-      <Link href={"/"}>Go to the home page</Link>
+      <Link href={'/'}>Go to the home page</Link>
     </div>
   );
 }

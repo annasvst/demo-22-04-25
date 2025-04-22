@@ -6,7 +6,9 @@ test('test', async ({ page }) => {
   const recipeNameError = await page.getByText('Recipe name should be at');
   expect(recipeNameError).toBeVisible();
 
-  const instructionsError = await page.getByText('The instructions should be at');
+  const instructionsError = await page.getByText(
+    'The instructions should be at',
+  );
   expect(instructionsError).toBeVisible();
 
   const urlError = await page.getByText('Please enter a valid url.');

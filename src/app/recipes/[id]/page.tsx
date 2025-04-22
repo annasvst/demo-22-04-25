@@ -10,7 +10,7 @@ export default async function RecipeDetailsPage({
 
   const recipeData = await response.json();
 
-  if (recipeData.meals === "Invalid ID")
+  if (recipeData.meals === 'Invalid ID')
     throw Error(`Invalid recipe ID requested, ${id}`);
 
   return (

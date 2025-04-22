@@ -4,4 +4,4 @@ export const Footer = () => {
       <p className="text-center text-gray-50">© 2021 Cooking Book App</p>
     </footer>
   );
-}
+};
