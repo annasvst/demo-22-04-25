@@ -1,4 +1,4 @@
-import NewRecipeForm from "./NewRecipeForm";
+import NewRecipeForm from './NewRecipeForm';
 
 const NewRecipePage = () => {
   return (

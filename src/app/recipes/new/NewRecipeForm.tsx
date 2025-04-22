@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import { saveRecipe } from "@/app/actions/recipes";
-import { NewRecipeFormState } from "@/types/recipes";
-import { Field, Input, Label, Textarea } from "@headlessui/react";
-import Form from "next/form";
-import { useActionState } from "react";
+import { saveRecipe } from '@/app/actions/recipes';
+import { NewRecipeFormState } from '@/types/recipes';
+import { Field, Input, Label, Textarea } from '@headlessui/react';
+import Form from 'next/form';
+import { useActionState } from 'react';
 
 const initialState: NewRecipeFormState = {
   success: false,
-  message: "",
+  message: '',
   inputs: {
-    strMeal: "",
-    strInstructions: "",
-    strMealThumb: "",
-  }
+    strMeal: '',
+    strInstructions: '',
+    strMealThumb: '',
+  },
 };
 
 const NewRecipeForm = () => {
@@ -21,7 +21,7 @@ const NewRecipeForm = () => {
 
   console.log('State is', state);
 
-  console.log("Is pending", isPending);
+  console.log('Is pending', isPending);
 
   return (
     <Form action={action} noValidate className="text-left">
@@ -34,11 +34,11 @@ const NewRecipeForm = () => {
           aria-describedby="strMeal-error"
           defaultValue={state?.inputs?.strMeal}
         />
-        {
-          state?.errors?.strMeal && (
-            <p id="strMeal-error" className="text-red-500">{state.errors.strMeal}</p>
-          )
-        }
+        {state?.errors?.strMeal && (
+          <p id="strMeal-error" className="text-red-500">
+            {state.errors.strMeal}
+          </p>
+        )}
       </Field>
 
       <Field className="flex flex-col my-4">
@@ -49,11 +49,9 @@ const NewRecipeForm = () => {
           className="dark:border-gray-100 border border-rounded p-2"
           defaultValue={state?.inputs?.strInstructions}
         />
-        {
-          state?.errors?.strInstructions && (
-            <p className="text-red-500">{state.errors.strInstructions}</p>
-          )
-        }
+        {state?.errors?.strInstructions && (
+          <p className="text-red-500">{state.errors.strInstructions}</p>
+        )}
       </Field>
 
       <Field className="flex flex-col my-4">
@@ -64,14 +62,14 @@ const NewRecipeForm = () => {
           className="dark:border-gray-100 border border-rounded p-2"
           defaultValue={state?.inputs?.strMealThumb}
         />
-        {
-          state?.errors?.strMealThumb && (
-            <p className="text-red-500">{state?.errors?.strMealThumb}</p>
-          )
-        }
+        {state?.errors?.strMealThumb && (
+          <p className="text-red-500">{state?.errors?.strMealThumb}</p>
+        )}
       </Field>
 
-      <button type="submit" data-testid="submit-btn">Save recipe</button>
+      <button type="submit" data-testid="submit-btn">
+        Save recipe
+      </button>
     </Form>
   );
 };
