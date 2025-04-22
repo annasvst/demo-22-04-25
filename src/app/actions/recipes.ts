@@ -14,7 +14,7 @@ const recipeSchema = z.object({
 });
 
 export async function saveRecipe(
-  prevState: NewRecipeFormState | null,
+  state: NewRecipeFormState,
   formData: FormData,
 ) {
   console.log('Save recipe server action is called!', formData);

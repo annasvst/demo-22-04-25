@@ -1,15 +1,13 @@
 export interface NewRecipeFormState {
   success: boolean;
   message: string;
-
   errors?: {
     [K in keyof RecipeFormData]?: string[];
   };
-  inputs?: Partial<RecipeFormData>;
+  inputs: Partial<RecipeFormData>;
 }
 
 export interface RecipeFormData {
-  idMeal?: string;
   strMeal: string;
   strInstructions: string;
   strMealThumb: string;
